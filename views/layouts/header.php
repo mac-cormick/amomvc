@@ -36,6 +36,7 @@
                                 <li><a href="/addmulti">Добавление доп. поля типа мультиселект</a></li>
                                 <li><a href="/addtextfield">Добавление доп. поля типа текст</a></li>
                                 <li><a href="/addnote">Добавление примечания</a></li>
+                                <li><a href="/addtask">Добавление задачи</a></li>
                                 <li><a href="/finishtask">Завершение задачи</a></li>
                             </ul>
                         </li>

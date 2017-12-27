@@ -5,6 +5,7 @@ return array(
 		'addtextfield' => 'front/addtextfield',
 		'addmulti' => 'front/addmulti',
 		'addnote' => 'front/addnote',
+		'addtask' => 'front/addtask',
 		'finishtask' => 'front/finishtask',
 
 		'front' => 'front/front',

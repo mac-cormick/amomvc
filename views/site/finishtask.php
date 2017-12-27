@@ -19,14 +19,16 @@
                 <p class="text-success"><?php echo $answer; ?></p>
             <?php endif; ?>
 
+            <?php if (isset($res)) {var_dump($res);} ?>
+
             <form action="/finishtask" method="post">
                 <div class="form-group">
                     <label for="task-id">ID задачи</label>
-                    <p><input class="form-control" type="text" name="task-id" id="task-id"></p>
+                    <p><input class="form-control" type="text" name="task-id" id="task-id" required></p>
                     <label for="date">Дата изменения</label>
-                    <p><input class="form-control" type="datetime-local" name="date" id="date"></p>
+                    <p><input class="form-control" type="datetime-local" name="date" id="date" required></p>
                     <label for="task-text">Текст примечания</label>
-                    <p><input class="form-control" type="text" name="task-text" id="task-text"></p>
+                    <p><input class="form-control" type="text" name="task-text" id="task-text" required></p>
                     <p><input class="btn btn-primary" name="submit" type="submit" value="Завершить задачу"></p>
                 </div>
             </form>

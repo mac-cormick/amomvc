@@ -1,25 +1,21 @@
 <?php
 
-class User
-{
-	public static function checkLogged()
-	{
+class User {
+	public static function checkLogged() {
 		if (isset($_SESSION['email'])) {
 			return true;
 		}
 		header("Location: /");
 	}
 
-	public static function isGuest()
-	{
+	public static function isGuest() {
 		if (isset($_SESSION['email'])) {
 			return false;
 		}
 		return true;
 	}
 
-	public static function checkUserData($email, $password, $sub)
-	{
+	public static function checkUserData($email, $password, $sub) {
         #Массив с параметрами, которые нужно передать методом POST к API системы
         $user=array(
             'USER_LOGIN'=>$email, #Ваш логин (электронная почта)
@@ -75,18 +71,14 @@ class User
          */
         $Response=json_decode($out,true);
         $Response=$Response['response'];
-        if(isset($Response['auth'])) #Флаг авторизации доступен в свойстве "auth"
-        {
+        if(isset($Response['auth'])) {
             return $email;
-        } else
-        {
+        } else {
             return false;
         }
-
 	}
 
-	public static function auth($email, $password, $sub)
-	{
+	public static function auth($email, $password, $sub){
 		$_SESSION['email'] = $email;
 		$_SESSION['hash'] = $password;
 		$_SESSION['subdomain'] = $sub;
